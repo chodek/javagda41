@@ -17,7 +17,6 @@ public class Solutions5 extends Exercises5 {
                 stack.push(c);
             } else if (c == ')' && (stack.isEmpty() || stack.pop() != '(')) {
                 return false;
-                // Nowo dodana linijka kodu
             }
         }
         return stack.isEmpty();
