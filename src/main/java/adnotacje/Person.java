@@ -1,10 +1,14 @@
 package adnotacje;
 
-public class Person implements Comparable {
+import lombok.Data;
+
+@Data
+public class Person{
 
     private int age;
 
-    @MaxLength(maxLength = 10)
+    //@MaxLength(maxLength = 10)
+
     private String name;
     private String surname;
 
@@ -23,33 +27,8 @@ public class Person implements Comparable {
 
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-
-
-    @Override
-    public int compareTo(Object o) {
-        if (o != null || getClass() == o.getClass()) {
-            Person otherOne = (Person) o;
-            if (this.age < otherOne.age) {
-                return -1;
-            } else if (this.age == otherOne.age) {
-                return this.surname.compareToIgnoreCase(otherOne.surname);
-            } else {
-                return 1;
-            }
-        }
-        return 0;
+    public void setAge(int age) {
+        System.out.println("hahaha");
     }
 
 
